@@ -67,6 +67,7 @@ function HomePage() {
       <ServicesSection />
       <ProcessSection />
       <FaqSection />
+      <ResultsSection />
       <FinalCta />
     </div>
   );
