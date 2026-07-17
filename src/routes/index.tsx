@@ -98,18 +98,7 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background" />
       </div>
 
-      {/* Centered wordmark */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="text-center hero-in" style={{ animationDelay: "150ms" }}>
-          <div className="eyebrow mb-6 text-white/60">EST. MMXXV</div>
-          <div className="text-[clamp(48px,11vw,180px)] leading-[0.9] font-extralight tracking-[-0.04em]">
-            WEZZEN
-          </div>
-          <div className="text-[clamp(14px,1.4vw,20px)] mt-3 tracking-[0.7em] font-light text-muted-foreground">
-            S P O R T S <sup className="text-[10px] tracking-normal">™</sup>
-          </div>
-        </div>
-      </div>
+      {/* Centered wordmark removido a pedido */}
 
       {/* Content bottom */}
       <div className="relative container-editorial pb-24 md:pb-28 z-10">
