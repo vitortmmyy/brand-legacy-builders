@@ -67,6 +67,7 @@ function HomePage() {
       <ServicesSection />
       <ProcessSection />
       <FaqSection />
+      <ResultsSection />
       <FinalCta />
     </div>
   );
@@ -373,6 +374,52 @@ function FaqSection() {
               </Reveal>
             );
           })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ResultsSection() {
+  return (
+    <section className="py-32 border-t border-white/[0.06]">
+      <div className="container-editorial">
+        <div className="grid md:grid-cols-12 gap-10 mb-20">
+          <div className="md:col-span-8">
+            <Reveal>
+              <div className="eyebrow">Resultados</div>
+              <h2 className="mt-4 text-[clamp(32px,4vw,52px)] font-light tracking-[-0.03em] leading-[1.05] text-balance">
+                Construindo uma metodologia baseada em profundidade.
+              </h2>
+            </Reveal>
+          </div>
+          <div className="md:col-span-4">
+            <Reveal delay={150}>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                A WEZZEN SPORTS™ ainda está em sua Founders Edition, mas nasce apoiada em anos de estudo, prática em branding e especialização no universo esportivo.
+              </p>
+            </Reveal>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-4 gap-6">
+          {[
+            { number: "3+", label: "Anos de experiência em Design e Branding." },
+            { number: "100+", label: "Projetos criativos desenvolvidos." },
+            { number: "3", label: "Atletas referência profundamente estudados." },
+            { number: "1", label: "Metodologia proprietária." },
+          ].map((s, i) => (
+            <Reveal key={s.label} delay={i * 80}>
+              <div className="pt-6">
+                <div className="text-[clamp(44px,5vw,72px)] font-light tracking-[-0.04em] leading-none">
+                  {s.number}
+                </div>
+                <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
+                  {s.label}
+                </p>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>
