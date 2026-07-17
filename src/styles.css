@@ -142,6 +142,38 @@
   &:hover { transform: translateY(-1px); box-shadow: 0 20px 40px -18px rgba(255,255,255,0.35); }
 }
 
+@utility btn-shine {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(.2,.7,.2,1), box-shadow 0.3s ease;
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 14px 34px -16px rgba(255,255,255,0.3);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+    transform: translateX(-100%) skewX(-16deg);
+    animation: shine-sweep 10s ease-in-out infinite;
+    pointer-events: none;
+  }
+  &:hover::after {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes shine-sweep {
+  0% { transform: translateX(-100%) skewX(-16deg); opacity: 0; }
+  2% { opacity: 0.18; }
+  10% { transform: translateX(250%) skewX(-16deg); opacity: 0; }
+  100% { transform: translateX(250%) skewX(-16deg); opacity: 0; }
+}
+
 @utility btn-ghost {
   display: inline-flex;
   align-items: center;

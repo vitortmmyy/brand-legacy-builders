@@ -117,7 +117,7 @@ function Hero() {
           </Reveal>
           <Reveal delay={800}>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link to="/contato" className="btn-primary">
+              <Link to="/contato" className="btn-primary btn-shine">
                 Aplicar para Founders Edition <ArrowRight size={16} />
               </Link>
               <Link to="/servicos" className="btn-ghost">Conhecer o Método</Link>
@@ -441,7 +441,7 @@ function FinalCta() {
               Aplicações abertas para atletas selecionados. Processo confidencial, sob análise.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-3">
-              <Link to="/contato" className="btn-primary">
+              <Link to="/contato" className="btn-primary btn-shine">
                 Aplicar para Founders Edition <ArrowRight size={16} />
               </Link>
               <Link to="/sobre" className="btn-ghost">Sobre a WEZZEN</Link>
