@@ -28,9 +28,9 @@ const schema = z.object({
 });
 
 const FAQ = [
-  { q: "Qual o tempo de resposta?", a: "Respondemos aplicações em até 48h úteis." },
+  { q: "Qual o tempo de resposta?", a: "Respondemos aplicações em até 24h úteis." },
   { q: "Vocês têm agenda aberta?", a: "Trabalhamos com número limitado de projetos simultâneos por trimestre." },
-  { q: "Aceitam atletas internacionais?", a: "Sim, atendemos globalmente em português, inglês e espanhol." },
+  { q: "Aceitam atletas internacionais?", a: "Sim, atendemos globalmente em português, inglês, espanhol e francês." },
 ];
 
 function ContatoPage() {
@@ -60,7 +60,7 @@ function ContatoPage() {
       <section className="py-32 border-b border-white/[0.06]">
         <div className="container-editorial">
           <Reveal>
-            <div className="eyebrow">Contato</div>
+            <div className="eyebrow">{"\n"}</div>
             <h1 className="mt-6 text-[clamp(36px,6vw,84px)] font-light leading-[1.02] tracking-[-0.035em] text-balance max-w-4xl">
               Vamos conversar sobre o próximo passo da sua carreira.
             </h1>
@@ -78,19 +78,19 @@ function ContatoPage() {
           <div className="md:col-span-5 space-y-8">
             <Reveal>
               <div className="glass-panel p-8">
-                <div className="eyebrow">Direto</div>
+                <div className="eyebrow">CONTATO</div>
                 <ul className="mt-6 space-y-5 text-sm">
                   <li className="flex items-center gap-4">
                     <Mail size={16} className="text-muted-foreground" />
-                    <a href="mailto:hello@wezzensports.com" className="hover:text-foreground text-muted-foreground">hello@wezzensports.com</a>
+                    <a href="mailto:wezzendesign@gmail.com" className="hover:text-foreground text-muted-foreground">wezzendesign@gmail.com</a>
                   </li>
                   <li className="flex items-center gap-4">
                     <MessageCircle size={16} className="text-muted-foreground" />
-                    <a href="https://wa.me/5500000000000" className="hover:text-foreground text-muted-foreground">WhatsApp</a>
+                    <a href="https://wa.me/5500000000000" className="hover:text-foreground text-muted-foreground">WhatsApp{"\u00a0"} -{"\u00a0"} Fale Conosco</a>
                   </li>
                   <li className="flex items-center gap-4">
                     <Instagram size={16} className="text-muted-foreground" />
-                    <a href="https://instagram.com" className="hover:text-foreground text-muted-foreground">@wezzensports</a>
+                    <a href="https://instagram.com" className="hover:text-foreground text-muted-foreground">@wezzen.sports</a>
                   </li>
                   <li className="flex items-center gap-4">
                     <MapPin size={16} className="text-muted-foreground" />

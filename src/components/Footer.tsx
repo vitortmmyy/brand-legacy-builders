@@ -40,7 +40,7 @@ export function Footer() {
           <div className="md:col-span-3">
             <div className="eyebrow mb-4">Contato</div>
             <ul className="space-y-2.5 text-sm text-muted-foreground">
-              <li><a href="mailto:hello@wezzensports.com" className="hover:text-foreground transition-colors">hello@wezzensports.com</a></li>
+              <li><a href="mailto:wezzendesign@gmail.com" className="hover:text-foreground transition-colors">wezzendesign@gmail.com</a></li>
               <li><a href="https://wa.me/5500000000000" className="hover:text-foreground transition-colors">WhatsApp</a></li>
               <li><a href="https://instagram.com" className="hover:text-foreground transition-colors">Instagram</a></li>
               <li>São Paulo · Global</li>
