@@ -84,10 +84,13 @@ function Hero() {
     <section ref={ref} className="relative -mt-[72px] min-h-dvh flex items-end overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <img
-          src={heroImg}
-          alt=""
-          fetchPriority="high"
+        <video
+          src={heroVideo.url}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
           className="w-full h-full object-cover hero-in"
           style={{ transform: `translate3d(0, ${y * 0.25}px, 0) scale(1.05)`, filter: "grayscale(1) contrast(1.05)" }}
         />
