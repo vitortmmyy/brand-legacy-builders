@@ -66,7 +66,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden md:block">
-          <Link to="/contato" className="btn-primary text-[13px] py-2.5 px-5">
+          <Link to="/contato" className="btn-primary btn-shine text-[13px] py-2.5 px-5">
             Aplicar
           </Link>
         </div>
@@ -99,7 +99,7 @@ export function Navbar() {
               {item.label}
             </Link>
           ))}
-          <Link to="/contato" className="btn-primary mt-6 justify-center">
+          <Link to="/contato" className="btn-primary btn-shine mt-6 justify-center">
             Aplicar para Founders Edition
           </Link>
         </div>
