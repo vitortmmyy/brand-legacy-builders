@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, ArrowDown, Plus, Minus, Compass, Layers, Sparkles, Radio, Camera, Handshake } from "lucide-react";
-import heroImg from "../assets/hero.jpg";
+import heroVideo from "../assets/hero.mp4.asset.json";
 import case1 from "../assets/case-1.jpg";
 import case2 from "../assets/case-2.jpg";
 import case3 from "../assets/case-3.jpg";
