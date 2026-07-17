@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, ArrowDown, Plus, Minus, Compass, Layers, Sparkles, Radio, Camera, Handshake } from "lucide-react";
-import heroImg from "../assets/hero.jpg";
+import heroVideo from "../assets/hero.mp4.asset.json";
 import case1 from "../assets/case-1.jpg";
 import case2 from "../assets/case-2.jpg";
 import case3 from "../assets/case-3.jpg";
@@ -84,10 +84,13 @@ function Hero() {
     <section ref={ref} className="relative -mt-[72px] min-h-dvh flex items-end overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <img
-          src={heroImg}
-          alt=""
-          fetchPriority="high"
+        <video
+          src={heroVideo.url}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
           className="w-full h-full object-cover hero-in"
           style={{ transform: `translate3d(0, ${y * 0.25}px, 0) scale(1.05)`, filter: "grayscale(1) contrast(1.05)" }}
         />
@@ -95,18 +98,7 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background" />
       </div>
 
-      {/* Centered wordmark */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="text-center hero-in" style={{ animationDelay: "150ms" }}>
-          <div className="eyebrow mb-6 text-white/60">EST. MMXXV</div>
-          <div className="text-[clamp(48px,11vw,180px)] leading-[0.9] font-extralight tracking-[-0.04em]">
-            WEZZEN
-          </div>
-          <div className="text-[clamp(14px,1.4vw,20px)] mt-3 tracking-[0.7em] font-light text-muted-foreground">
-            S P O R T S <sup className="text-[10px] tracking-normal">™</sup>
-          </div>
-        </div>
-      </div>
+      {/* Centered wordmark removido a pedido */}
 
       {/* Content bottom */}
       <div className="relative container-editorial pb-24 md:pb-28 z-10">
