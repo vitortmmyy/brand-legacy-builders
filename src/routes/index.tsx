@@ -208,7 +208,7 @@ function CasesSection() {
   const cases = [
     { name: "Mackenzie Dern", role: "JIU-JITSU AND MMA CHAMPION", img: mackenzieImg.url },
     { name: "Bia Mesquita",   role: "Jiu-Jitsu · Multi-Campeã Mundial", img: biaImg.url },
-    { name: "Diogo Reis",     role: "Jiu-Jitsu · ADCC Champion", img: case2 },
+    { name: "Diogo Reis",     role: "Jiu-Jitsu · ADCC Champion", img: diogoImg.url },
   ];
   return (
     <section className="py-32 border-t border-white/[0.06]">
