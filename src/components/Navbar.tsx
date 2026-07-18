@@ -4,8 +4,8 @@ import { Menu, X } from "lucide-react";
 
 const NAV = [
   { to: "/", label: "Home" },
-  { to: "/servicos", label: "Serviços" },
   { to: "/sobre", label: "Sobre" },
+  { to: "/servicos", label: "Serviços" },
   { to: "/fundador", label: "Fundador" },
   { to: "/contato", label: "Contato" },
 ] as const;
@@ -67,7 +67,7 @@ export function Navbar() {
 
         <div className="hidden md:block">
           <Link to="/contato" className="btn-primary btn-shine text-[13px] py-2.5 px-5">
-            Aplicar
+            Inicie agora
           </Link>
         </div>
 
@@ -100,7 +100,7 @@ export function Navbar() {
             </Link>
           ))}
           <Link to="/contato" className="btn-primary btn-shine mt-6 justify-center">
-            Aplicar para Founders Edition
+            Inicie agora
           </Link>
         </div>
       </div>
