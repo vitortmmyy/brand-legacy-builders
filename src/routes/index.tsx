@@ -5,6 +5,7 @@ import heroVideo from "../assets/hero.mp4.asset.json";
 import mackenzieImg from "../assets/mackenzie.png.asset.json";
 import biaImg from "../assets/bia.png.asset.json";
 import diogoImg from "../assets/baby_shark.png.asset.json";
+import logomarkImg from "../assets/LOGOMARK.png.asset.json";
 import { LogoMarquee } from "../components/Marquee";
 import { Reveal } from "../components/Reveal";
 
@@ -116,11 +117,16 @@ function Hero() {
             </p>
           </Reveal>
           <Reveal delay={800}>
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-10 flex flex-wrap sm:flex-nowrap items-center gap-4">
               <Link to="/contato" className="btn-primary btn-shine">
                 Inicie agora <ArrowRight size={16} />
               </Link>
               <Link to="/servicos" className="btn-ghost">Conhecer o Método</Link>
+              <img
+                src={logomarkImg.url}
+                alt="WEZZEN SPORTS logomark"
+                className="ml-auto h-11 w-11 object-contain shrink-0"
+              />
             </div>
           </Reveal>
         </div>
