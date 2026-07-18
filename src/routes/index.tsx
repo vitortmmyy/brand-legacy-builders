@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, ArrowDown, Plus, Minus, Compass, Layers, Sparkles, Radio, Camera, Handshake } from "lucide-react";
 import heroVideo from "../assets/hero.mp4.asset.json";
-import case1 from "../assets/case-1.jpg";
+import mackenzieImg from "../assets/mackenzie.png.asset.json";
 import case2 from "../assets/case-2.jpg";
 import case3 from "../assets/case-3.jpg";
 import { LogoMarquee } from "../components/Marquee";
