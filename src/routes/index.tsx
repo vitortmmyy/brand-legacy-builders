@@ -4,7 +4,7 @@ import { ArrowRight, ArrowDown, Plus, Minus, Compass, Layers, Sparkles, Radio, C
 import heroVideo from "../assets/hero.mp4.asset.json";
 import mackenzieImg from "../assets/mackenzie.png.asset.json";
 import biaImg from "../assets/bia.png.asset.json";
-import case2 from "../assets/case-2.jpg";
+import diogoImg from "../assets/baby_shark.png.asset.json";
 import { LogoMarquee } from "../components/Marquee";
 import { Reveal } from "../components/Reveal";
 
