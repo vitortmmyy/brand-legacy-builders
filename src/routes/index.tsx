@@ -206,7 +206,7 @@ function MethodSection() {
 
 function CasesSection() {
   const cases = [
-    { name: "Mackenzie Dern", role: "MMA · Strawweight", img: case1 },
+    { name: "Mackenzie Dern", role: "MMA · Strawweight", img: mackenzieImg.url },
     { name: "Bia Mesquita",   role: "Jiu-Jitsu · Multi-Campeã Mundial", img: case3 },
     { name: "Diogo Reis",     role: "Jiu-Jitsu · ADCC Champion", img: case2 },
   ];
