@@ -3,8 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowRight, ArrowDown, Plus, Minus, Compass, Layers, Sparkles, Radio, Camera, Handshake } from "lucide-react";
 import heroVideo from "../assets/hero.mp4.asset.json";
 import mackenzieImg from "../assets/mackenzie.png.asset.json";
+import biaImg from "../assets/bia.png.asset.json";
 import case2 from "../assets/case-2.jpg";
-import case3 from "../assets/case-3.jpg";
 import { LogoMarquee } from "../components/Marquee";
 import { Reveal } from "../components/Reveal";
 
@@ -207,7 +207,7 @@ function MethodSection() {
 function CasesSection() {
   const cases = [
     { name: "Mackenzie Dern", role: "JIU-JITSU AND MMA CHAMPION", img: mackenzieImg.url },
-    { name: "Bia Mesquita",   role: "Jiu-Jitsu · Multi-Campeã Mundial", img: case3 },
+    { name: "Bia Mesquita",   role: "Jiu-Jitsu · Multi-Campeã Mundial", img: biaImg.url },
     { name: "Diogo Reis",     role: "Jiu-Jitsu · ADCC Champion", img: case2 },
   ];
   return (
