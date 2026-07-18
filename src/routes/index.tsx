@@ -118,7 +118,7 @@ function Hero() {
           <Reveal delay={800}>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link to="/contato" className="btn-primary btn-shine">
-                Aplicar para Founders Edition <ArrowRight size={16} />
+                Inicie agora <ArrowRight size={16} />
               </Link>
               <Link to="/servicos" className="btn-ghost">Conhecer o Método</Link>
             </div>
