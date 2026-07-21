@@ -107,21 +107,26 @@ function Hero() {
         <div className="max-w-4xl">
           <Reveal delay={400}>
             <h1 className="text-balance text-[clamp(28px,4.4vw,58px)] leading-[1.05] font-light tracking-[-0.03em]">
-              Não criamos campanhas.<br />
-              <span className="text-muted-foreground">Construímos ativos de marca</span> para atletas que desejam ser lembrados.
+              Seu talento conquista resultados.<br />
+              <span className="text-muted-foreground">Sua marca define o tamanho</span> do seu legado.
             </h1>
           </Reveal>
           <Reveal delay={600}>
             <p className="mt-8 max-w-2xl text-[15px] md:text-[17px] text-muted-foreground leading-relaxed">
-              A WEZZEN SPORTS™ transforma atletas em marcas institucionais capazes de atrair patrocinadores, gerar autoridade e construir legado.
+              Resultados esportivos constroem reconhecimento. Uma marca bem estruturada transforma esse reconhecimento em autoridade, oportunidades e valor de mercado.
             </p>
           </Reveal>
-          <Reveal delay={800}>
+          <Reveal delay={700}>
+            <p className="mt-6 max-w-2xl text-[15px] md:text-[17px] text-muted-foreground leading-relaxed">
+              Descubra por que atletas extraordinários continuam invisíveis para grandes oportunidades e como uma estratégia de marca pode mudar essa realidade.
+            </p>
+          </Reveal>
+          <Reveal delay={900}>
             <div className="mt-10 flex flex-wrap sm:flex-nowrap items-center gap-4">
               <Link to="/contato" className="btn-primary btn-shine">
-                Inicie agora <ArrowRight size={16} />
+                Iniciar minha aplicação <ArrowRight size={16} />
               </Link>
-              <Link to="/servicos" className="btn-ghost">Conhecer o Método</Link>
+              <Link to="/servicos" className="btn-ghost">Conhecer a metodologia</Link>
               <img
                 src={logomarkImg.url}
                 alt="WEZZEN SPORTS logomark"
