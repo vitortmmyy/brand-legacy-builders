@@ -34,12 +34,12 @@ export const Route = createFileRoute("/")({
 });
 
 const METHOD = [
-  { icon: Compass,  title: "Brand Strategy",      desc: "Fundamentos, arquétipos e território de marca do atleta." },
-  { icon: Layers,   title: "Brand Positioning",   desc: "Posicionamento único em relação ao mercado e à modalidade." },
-  { icon: Sparkles, title: "Visual Identity",     desc: "Sistema visual completo — do símbolo ao ambiente gráfico." },
-  { icon: Radio,    title: "Digital Presence",    desc: "Ecossistema digital coerente, editorial e escalável." },
-  { icon: Camera,   title: "Media Assets",        desc: "Fotografia, vídeo e conteúdo institucional de alto nível." },
-  { icon: Handshake,title: "Sponsor Readiness",   desc: "Materiais e narrativa prontos para captar patrocínios globais." },
+  { icon: Compass,  title: "Estratégia",      desc: "Toda marca forte nasce de decisões estratégicas tomadas antes da execução." },
+  { icon: Layers,   title: "Posicionamento",   desc: "Antes de investir em um atleta, o mercado precisa compreender por que ele merece ser lembrado." },
+  { icon: Sparkles, title: "Identidade",     desc: "Sua comunicação deve refletir o mesmo nível de excelência presente na sua performance esportiva." },
+  { icon: Radio,    title: "Presença",    desc: "Cada perfil, publicação e ponto de contato influencia a percepção construída sobre sua carreira." },
+  { icon: Camera,   title: "Autoridade",        desc: "Credibilidade não nasce da exposição. Ela nasce da consistência." },
+  { icon: Handshake,title: "Legado",   desc: "Resultados constroem história. Marcas bem estruturadas fazem essa história continuar gerando valor." },
 ];
 
 const PROCESS = [
