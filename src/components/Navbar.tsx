@@ -4,9 +4,8 @@ import { Menu, X } from "lucide-react";
 
 const NAV = [
   { to: "/", label: "Home" },
-  { to: "/sobre", label: "Sobre" },
   { to: "/servicos", label: "Serviços" },
-  { to: "/fundador", label: "Fundador" },
+  { to: "/sobre", label: "Sobre a WEZZEN" },
   { to: "/contato", label: "Contato" },
 ] as const;
 

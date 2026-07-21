@@ -20,8 +20,7 @@ export function Footer() {
             <ul className="space-y-2.5 text-sm text-muted-foreground">
               <li><Link to="/" className="hover:text-foreground transition-colors">Home</Link></li>
               <li><Link to="/servicos" className="hover:text-foreground transition-colors">Serviços</Link></li>
-              <li><Link to="/sobre" className="hover:text-foreground transition-colors">Sobre</Link></li>
-              <li><Link to="/fundador" className="hover:text-foreground transition-colors">Fundador</Link></li>
+              <li><Link to="/sobre" className="hover:text-foreground transition-colors">Sobre a WEZZEN</Link></li>
               <li><Link to="/contato" className="hover:text-foreground transition-colors">Contato</Link></li>
             </ul>
           </div>

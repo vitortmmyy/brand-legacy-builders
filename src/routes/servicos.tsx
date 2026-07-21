@@ -193,7 +193,7 @@ function ServicosPage() {
           </h2>
           <div className="mt-10 flex justify-center gap-3 flex-wrap">
             <Link to="/contato" className="btn-primary">Agendar conversa <ArrowRight size={14} /></Link>
-            <Link to="/fundador" className="btn-ghost">Conheça o fundador</Link>
+            <Link to="/sobre" hash="fundador" className="btn-ghost">Conheça o fundador</Link>
           </div>
         </div>
       </section>
