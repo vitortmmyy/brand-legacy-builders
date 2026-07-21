@@ -34,12 +34,12 @@ export const Route = createFileRoute("/")({
 });
 
 const METHOD = [
-  { icon: Compass,  title: "Brand Strategy",      desc: "Fundamentos, arquétipos e território de marca do atleta." },
-  { icon: Layers,   title: "Brand Positioning",   desc: "Posicionamento único em relação ao mercado e à modalidade." },
-  { icon: Sparkles, title: "Visual Identity",     desc: "Sistema visual completo — do símbolo ao ambiente gráfico." },
-  { icon: Radio,    title: "Digital Presence",    desc: "Ecossistema digital coerente, editorial e escalável." },
-  { icon: Camera,   title: "Media Assets",        desc: "Fotografia, vídeo e conteúdo institucional de alto nível." },
-  { icon: Handshake,title: "Sponsor Readiness",   desc: "Materiais e narrativa prontos para captar patrocínios globais." },
+  { icon: Compass,  title: "Estratégia",      desc: "Toda marca forte nasce de decisões estratégicas tomadas antes da execução." },
+  { icon: Layers,   title: "Posicionamento",   desc: "Antes de investir em um atleta, o mercado precisa compreender por que ele merece ser lembrado." },
+  { icon: Sparkles, title: "Identidade",     desc: "Sua comunicação deve refletir o mesmo nível de excelência presente na sua performance esportiva." },
+  { icon: Radio,    title: "Presença",    desc: "Cada perfil, publicação e ponto de contato influencia a percepção construída sobre sua carreira." },
+  { icon: Camera,   title: "Autoridade",        desc: "Credibilidade não nasce da exposição. Ela nasce da consistência." },
+  { icon: Handshake,title: "Legado",   desc: "Resultados constroem história. Marcas bem estruturadas fazem essa história continuar gerando valor." },
 ];
 
 const PROCESS = [
@@ -175,16 +175,16 @@ function MethodSection() {
             <Reveal>
               <div className="eyebrow">O Método</div>
               <h2 className="mt-4 text-[clamp(32px,4.6vw,60px)] leading-[1.05] font-light tracking-[-0.03em] text-balance">
-                O atleta já possui talento.
+                Você treinou para vencer competições.
                 <br />
-                <span className="text-muted-foreground">Nós construímos o ativo.</span>
+                <span className="text-muted-foreground">Mas ninguém ensinou como construir uma carreira que continue gerando valor depois delas.</span>
               </h2>
             </Reveal>
           </div>
           <div className="md:col-span-4">
             <Reveal delay={150}>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Uma metodologia proprietária desenhada para transformar performance esportiva em patrimônio de marca duradouro.
+                Durante anos, atletas dedicam suas vidas ao treinamento, à disciplina e à busca constante por resultados. Mesmo assim, muitos encerram suas carreiras sem transformar essas conquistas em autoridade, oportunidades e reconhecimento duradouro. O problema raramente está na performance. Está na ausência de uma estrutura capaz de transformar resultados esportivos em valor de mercado. É exatamente essa lacuna que inspira a metodologia WEZZEN SPORTS™.
               </p>
             </Reveal>
           </div>
@@ -207,7 +207,7 @@ function MethodSection() {
 
         <div className="mt-16 flex justify-center">
           <Link to="/servicos" className="btn-ghost">
-            Conhecer o Método Completo <ArrowRight size={14} />
+            Conhecer o Método <ArrowRight size={14} />
           </Link>
         </div>
       </div>
