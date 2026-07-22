@@ -26,13 +26,12 @@ export function Footer() {
           </div>
 
           <div className="md:col-span-3">
-            <div className="eyebrow mb-4">Serviços</div>
+            <div className="eyebrow mb-4">Metodologia</div>
             <ul className="space-y-2.5 text-sm text-muted-foreground">
-              <li>Brand Strategy</li>
-              <li>Visual Identity</li>
-              <li>Digital Presence</li>
-              <li>Sponsor Readiness</li>
-              <li>Media Assets</li>
+              <li><Link to="/servicos/foundation" className="hover:text-foreground transition-colors">WEZZEN FOUNDATION™</Link></li>
+              <li><Link to="/servicos/ascent" className="hover:text-foreground transition-colors">WEZZEN ASCENT™</Link></li>
+              <li><Link to="/servicos/legacy" className="hover:text-foreground transition-colors">WEZZEN LEGACY™</Link></li>
+              <li><Link to="/servicos" className="hover:text-foreground transition-colors">Toda a metodologia</Link></li>
             </ul>
           </div>
 

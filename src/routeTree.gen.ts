@@ -14,6 +14,9 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicosRouteImport } from './routes/servicos'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ServicosLegacyRouteImport } from './routes/servicos.legacy'
+import { Route as ServicosFoundationRouteImport } from './routes/servicos.foundation'
+import { Route as ServicosAscentRouteImport } from './routes/servicos.ascent'
 
 const SobreRoute = SobreRouteImport.update({
   id: '/sobre',
@@ -40,41 +43,90 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicosLegacyRoute = ServicosLegacyRouteImport.update({
+  id: '/legacy',
+  path: '/legacy',
+  getParentRoute: () => ServicosRoute,
+} as any)
+const ServicosFoundationRoute = ServicosFoundationRouteImport.update({
+  id: '/foundation',
+  path: '/foundation',
+  getParentRoute: () => ServicosRoute,
+} as any)
+const ServicosAscentRoute = ServicosAscentRouteImport.update({
+  id: '/ascent',
+  path: '/ascent',
+  getParentRoute: () => ServicosRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contato': typeof ContatoRoute
-  '/servicos': typeof ServicosRoute
+  '/servicos': typeof ServicosRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
+  '/servicos/ascent': typeof ServicosAscentRoute
+  '/servicos/foundation': typeof ServicosFoundationRoute
+  '/servicos/legacy': typeof ServicosLegacyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contato': typeof ContatoRoute
-  '/servicos': typeof ServicosRoute
+  '/servicos': typeof ServicosRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
+  '/servicos/ascent': typeof ServicosAscentRoute
+  '/servicos/foundation': typeof ServicosFoundationRoute
+  '/servicos/legacy': typeof ServicosLegacyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/contato': typeof ContatoRoute
-  '/servicos': typeof ServicosRoute
+  '/servicos': typeof ServicosRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
+  '/servicos/ascent': typeof ServicosAscentRoute
+  '/servicos/foundation': typeof ServicosFoundationRoute
+  '/servicos/legacy': typeof ServicosLegacyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contato' | '/servicos' | '/sitemap.xml' | '/sobre'
+  fullPaths:
+    | '/'
+    | '/contato'
+    | '/servicos'
+    | '/sitemap.xml'
+    | '/sobre'
+    | '/servicos/ascent'
+    | '/servicos/foundation'
+    | '/servicos/legacy'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contato' | '/servicos' | '/sitemap.xml' | '/sobre'
-  id: '__root__' | '/' | '/contato' | '/servicos' | '/sitemap.xml' | '/sobre'
+  to:
+    | '/'
+    | '/contato'
+    | '/servicos'
+    | '/sitemap.xml'
+    | '/sobre'
+    | '/servicos/ascent'
+    | '/servicos/foundation'
+    | '/servicos/legacy'
+  id:
+    | '__root__'
+    | '/'
+    | '/contato'
+    | '/servicos'
+    | '/sitemap.xml'
+    | '/sobre'
+    | '/servicos/ascent'
+    | '/servicos/foundation'
+    | '/servicos/legacy'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContatoRoute: typeof ContatoRoute
-  ServicosRoute: typeof ServicosRoute
+  ServicosRoute: typeof ServicosRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SobreRoute: typeof SobreRoute
 }
@@ -116,26 +168,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/servicos/legacy': {
+      id: '/servicos/legacy'
+      path: '/legacy'
+      fullPath: '/servicos/legacy'
+      preLoaderRoute: typeof ServicosLegacyRouteImport
+      parentRoute: typeof ServicosRoute
+    }
+    '/servicos/foundation': {
+      id: '/servicos/foundation'
+      path: '/foundation'
+      fullPath: '/servicos/foundation'
+      preLoaderRoute: typeof ServicosFoundationRouteImport
+      parentRoute: typeof ServicosRoute
+    }
+    '/servicos/ascent': {
+      id: '/servicos/ascent'
+      path: '/ascent'
+      fullPath: '/servicos/ascent'
+      preLoaderRoute: typeof ServicosAscentRouteImport
+      parentRoute: typeof ServicosRoute
+    }
   }
 }
+
+interface ServicosRouteChildren {
+  ServicosAscentRoute: typeof ServicosAscentRoute
+  ServicosFoundationRoute: typeof ServicosFoundationRoute
+  ServicosLegacyRoute: typeof ServicosLegacyRoute
+}
+
+const ServicosRouteChildren: ServicosRouteChildren = {
+  ServicosAscentRoute: ServicosAscentRoute,
+  ServicosFoundationRoute: ServicosFoundationRoute,
+  ServicosLegacyRoute: ServicosLegacyRoute,
+}
+
+const ServicosRouteWithChildren = ServicosRoute._addFileChildren(
+  ServicosRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContatoRoute: ContatoRoute,
-  ServicosRoute: ServicosRoute,
+  ServicosRoute: ServicosRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SobreRoute: SobreRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
